@@ -22,7 +22,7 @@
 	<body <?php echo $body_class; ?>>
 		<div class="page">
 			<header>
-				<img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/gologo.png" alt="">
+				<img src="<?php echo get_stylesheet_directory_uri(); ?>/resources/gologo2.png" alt="">
 				<nav class="main-menu full">
 					<div class="screen-reader-text skip-link"><a href="#UPDATE ME" title="Skip to content">Skip to content</a></div>
 					<div class="compact-menu">
