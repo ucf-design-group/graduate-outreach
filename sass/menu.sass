@@ -2,32 +2,30 @@ nav.main-menu
 	
 	display: block
 	width: 100%
-	background-color: $gray
 	margin-top: 2.5em
 
 	li
 		display: inline-block
-		margin-right: 2.5em
-
-		&:last-child
-			margin-right: 0
+		padding-left: 2.5em
+		padding-right: 2.5em
+		border-top-left-radius: 10px
+		border-top-right-radius: 10px
 
 	.current
+		background-color: $gray
 		a
 			color: $yellow
 	
 	a
-		font-size: 2.5em
+		font-size: 2.75em
 		display: block
 		text-decoration: none
 		color: white
 		transition: color 0.3s ease-in-out
+		font-weight: 300
 
 		&:hover
 			color: $yellow
-
-		&:active
-			color: $teal
 	
 
 nav.main-menu.full
