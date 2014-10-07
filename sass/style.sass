@@ -12,40 +12,54 @@
 // Change this to whatever you'd like. This is just the defualt so we 
 // have something nice to prototype with.
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")
-@import url("http://fonts.googleapis.com/css?family=Varela+Round")
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700")
 
 // Necessary imports, feel free to explore and hack though :)
-@import reset, variables, menu, footer
+@import reset, variables, menu, footer, home
 
 // Base variables
-$baseTypeFace: 'Varela Round', sans-serif
+$baseTypeFace: 'Lato', sans-serif
 
 // Base layout/type
 html
 	font-size: 16px
 body
 	font: 62.5%/1.5 $baseTypeFace
-	font-weight: 600
-	background-color: $teal
+	font-weight: 300
+	background-color: white
 
 header
 	background-color: white
 	padding-top: 2em
-	background-image: url('resources/header.jpg')
+	background-image: url('resources/header2.jpg')
 	background-size: cover
-	background-position: center center
+	background-attachment: fixed
+	background-position: center 175%
 
 	img
 		display: block
 		width: 15%
 		margin: auto
-		background-color: rgba(255,255,255,0.5)
+		background-color: rgba(255,255,255,0.8)
+		box-shadow: 0 0 30px black
 		border-radius: 50%
-
+		border: 3px solid black
+		padding: 0
 footer
-	background-color: $gray
+	background-color: rgba(48,48,48,1)
 	color: white
-	
+
+
+h1
+	font-size: 3.5em
+	margin: 0.5em 0
+h2
+	font-size: 2.5em
+h3
+	font-size: 2em
+
+p
+	font-size: 1.5em
 // Clearfix (to use, @extend %clearfix)
 %clearfix
 	zoom: 1
