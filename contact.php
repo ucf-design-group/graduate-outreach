@@ -9,9 +9,29 @@ get_header(); ?>
 						get_template_part( 'content' );
 					} ?>
 				</div>
-				<!-- <aside> -->
-					<!-- OPTIONAL -->
-				<!-- </aside> -->
+
+					<section class="exec-board">
+						<h2>Knight-Thon Executive Board</h2>
+<?php
+						$leaderLoop = new WP_QUERY(array('post_type' => 'exec-board', 'posts_per_page' => -1, 'orderby' =>'meta_value', 'order' => 'ASC', 'meta_key' => 'leader-form-order'));
+						while ($leaderLoop->have_posts()) {
+							$leaderLoop->the_post();
+							$title = get_the_title();
+							$content = get_the_content();
+							$image = get_the_post_thumbnail($post->ID, 'thumbnail');
+							$position = get_post_meta($post->ID, 'leader-form-position', true);
+							$email = get_post_meta($post->ID, 'leader-form-email', true);
+?>	
+						<article class="leader">
+							<h3><?php echo $title; ?></h3>
+							<?php echo $image; ?>
+							<p><?php echo $position; ?></p>
+							<p><?php echo $content; ?></p>
+							<a class="email" href="mailto:<?php echo $email; ?>"><?php echo $email; ?></a>
+						</article>
+<?php 				}
+?>
+					</section>
 			</div>
 
 <?php get_footer(); ?>

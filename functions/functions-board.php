@@ -27,7 +27,6 @@ function leader_meta() {
 	$position = get_post_meta($post->ID, 'leader-form-position', true) ? get_post_meta($post->ID, 'leader-form-position', true) : '';
 	$email = get_post_meta($post->ID, 'leader-form-email', true) ? get_post_meta($post->ID, 'leader-form-email', true) : '';
 	$order = get_post_meta($post->ID, 'leader-form-order', true) ? get_post_meta($post->ID, 'leader-form-order', true) : '';
-	$twitter = get_post_meta($post->ID, 'leader-form-twitter', true) ? get_post_meta($post->ID, 'leader-form-twitter', true) : '';
 
 	?>
 	<style type="text/css">#leader-form-position{width: 200px;}#leader-form-email{width: 200px;}#leader-form-order{width: 50px;}#leader-form div{display:inline-block; padding:0 5px;}</style>
@@ -43,10 +42,6 @@ function leader_meta() {
 		<div>
 			<label for="leader-form-order">Order on Page:</label>
 			<input type="text" name="leader-form-order" id="leader-form-order" value="<?php echo $order; ?>" />
-		</div>
-		<div>
-			<label for="leader-form-twitter">Twitter Handle:</label>
-			<input type="text" name="leader-form-twitter" id="leader-form-twitter" value="<?php echo $twitter; ?>" />
 		</div>
 	</div>
 	<?php
@@ -73,7 +68,6 @@ function leader_meta_save() {
 	$input['position'] = (isset($_POST['leader-form-position']) ? $_POST['leader-form-position'] : '');
 	$input['email'] = (isset($_POST['leader-form-email']) ? $_POST['leader-form-email'] : '');
 	$input['order'] = (isset($_POST['leader-form-order']) ? $_POST['leader-form-order'] : '');
-	$input['twitter'] = (isset($_POST['leader-form-twitter']) ? $_POST['leader-form-twitter'] : '');
 
 	$input['order'] = str_pad($input['order'], 3, "0", STR_PAD_LEFT);
 
