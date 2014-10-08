@@ -13,12 +13,13 @@
 // have something nice to prototype with.
 @import url("http://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700")
 @import url("http://fonts.googleapis.com/css?family=Lato:300,400,700")
+@import url("http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600")
 
 // Necessary imports, feel free to explore and hack though :)
-@import reset, variables, menu, footer, home
+@import reset, variables, menu, footer, home, about
 
 // Base variables
-$baseTypeFace: 'Lato', sans-serif
+$baseTypeFace: 'Source Sans Pro', sans-serif
 
 // Base layout/type
 html
@@ -26,7 +27,7 @@ html
 body
 	font: 62.5%/1.5 $baseTypeFace
 	font-weight: 300
-	background-color: white
+	background-color: whitesmoke
 
 header
 	background-color: white
@@ -49,17 +50,39 @@ footer
 	background-color: rgba(48,48,48,1)
 	color: white
 
+	a
+		color: $teal
+		text-decoration: none
+		transition: color 0.3s ease-in-out
+
+		&:hover
+			color: darken($teal,30%)
+	p
+		font-size: 1.75em
+
 
 h1
 	font-size: 3.5em
 	margin: 0.5em 0
+	font-weight: 400
 h2
 	font-size: 2.5em
 h3
 	font-size: 2em
 
 p
-	font-size: 1.5em
+	font-size: 1.65em
+
+.main
+	width 100%
+	max-width: 1000px
+	height: 450px
+	padding: 3em 0
+	margin: auto
+
+	p
+		margin-bottom: 1em
+
 // Clearfix (to use, @extend %clearfix)
 %clearfix
 	zoom: 1
