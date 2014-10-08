@@ -2,6 +2,9 @@
 get_header(); ?>
 
 			<div class="content-area">
+				<div class="streetTeamSection">
+					
+				</div>
 				<div class="main">
 					<?php
 					while (have_posts()) {
@@ -9,9 +12,9 @@ get_header(); ?>
 						get_template_part( 'content' );
 					} ?>
 				</div>
-				<!-- <aside> -->
-					<!-- OPTIONAL -->
-				<!-- </aside> -->
+				<div class="streetTeamSignUp">
+					
+				</div>
 			</div>
 
 <?php get_footer(); ?>
