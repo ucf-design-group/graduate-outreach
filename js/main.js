@@ -42,6 +42,8 @@ $(document).ready(function () {
 
 // On window resize, reevaluate the view of the navigation.
 $(window).resize(function () {
-
+	
 	adjustNav();
+
 });
+
