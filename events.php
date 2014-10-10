@@ -37,7 +37,7 @@ get_header(); ?>
 								$dates = date('F jS, g:ia', $start) . " to " . date('F jS, g:ia', $end);
 ?>	
 						<article class="event">
-							<?php echo $image_url[0]; ?>
+							<?php echo $image; ?>
 							<h2><?php echo $title; ?></h2>
 							<p><?php echo $dates; ?></p>
 							<p><?php echo $content; ?></p>
