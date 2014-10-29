@@ -22,7 +22,7 @@ get_header(); ?>
 							$end = get_post_meta($post->ID, 'oe-form-end', true);
 							$content = get_the_content();
 							$link = get_post_meta($post->ID, 'oe-form-url', true);
-							$image = get_the_post_thumbnail($post->ID, 'medium');
+							$image = get_the_post_thumbnail($post->ID, array(450,450));
 							$image_url = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full');
 							$month = date('F', $start);
 							$day = date('j', $start);
