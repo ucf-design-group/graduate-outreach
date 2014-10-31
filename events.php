@@ -22,7 +22,7 @@ get_header(); ?>
 							$end = get_post_meta($post->ID, 'oe-form-end', true);
 							$content = get_the_content();
 							$link = get_post_meta($post->ID, 'oe-form-url', true);
-							$image = get_the_post_thumbnail($post->ID, array(450,450));
+							$image = get_the_post_thumbnail($post->ID, array(500,500));
 							$image_url = wp_get_attachment_image_src(get_post_thumbnail_id( $post->ID ), 'full');
 							$month = date('F', $start);
 							$day = date('j', $start);
@@ -38,15 +38,17 @@ get_header(); ?>
 ?>	
 						<article class="event">
 							<?php echo $image; ?>
-							<h2><?php echo $title; ?></h2>
-							<p><?php echo $dates; ?></p>
-							<p><?php echo $content; ?></p>
+							<div class="eventDescription">
+								<h2><?php echo $title; ?></h2>
+								<p class="date"><?php echo $dates; ?></p>
+								<p><?php echo $content; ?></p>
 <?php
 								if ($link != "") {
 ?>
-							<p><a href="<?php echo $link; ?>" target="_blank">Link</a></p>
+							<p class="eventLink"><a href="<?php echo $link; ?>" target="_blank">More Information</a></p>
 <?php				}
 ?>
+							</div>
 						</article>
 <?php
 						$counter++;
