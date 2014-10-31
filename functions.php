@@ -82,17 +82,17 @@ function remove_menus() {
 
 function custom_post_types() {
 
-	register_post_type('news', array(
-		'labels' => array(
-			'name' => 'News',
-			'singular_name' => 'News'),
-		'public' => true,
-		'hierarchical' => false,
-		'supports' => array('title', 'editor', 'excerpt', 'author'),
-		'register_meta_box_cb' => 'news_meta_add',
-		'taxonomies' => array(),
-		'has_archive' => false,
-		));
+	// register_post_type('news', array(
+	// 	'labels' => array(
+	// 		'name' => 'News',
+	// 		'singular_name' => 'News'),
+	// 	'public' => true,
+	// 	'hierarchical' => false,
+	// 	'supports' => array('title', 'editor', 'excerpt', 'author'),
+	// 	'register_meta_box_cb' => 'news_meta_add',
+	// 	'taxonomies' => array(),
+	// 	'has_archive' => false,
+	// 	));
 
 	register_post_type('exec-board', array(
 		'labels' => array(
