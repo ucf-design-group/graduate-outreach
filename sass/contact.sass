@@ -1,12 +1,15 @@
 .page-contact
 
 	.content-area
-		background-color: $yellowO
+		background: -webkit-linear-gradient($yellowO, whitesmoke) /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient($yellowO, whitesmoke) /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient($yellowO, whitesmoke) /* For Firefox 3.6 to 15 */
+		background: linear-gradient($yellowO, whitesmoke) /* Standard syntax */
+
 	section.exec-board
 		max-width: 100%
 		width: 1200px
-		padding: 1em
-		padding-top: 5em
+		padding: 5em 1em
 		margin: auto
 		@extend %clearfix
 

@@ -2,9 +2,12 @@
 	
 	.videobg
 		width: 100%
-		background-color: $tealO
-		height: 550px
-		padding: 3em 0
+		background: -webkit-linear-gradient($tealO, whitesmoke) /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient($tealO, whitesmoke) /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient($tealO, whitesmoke) /* For Firefox 3.6 to 15 */
+		background: linear-gradient($tealO, whitesmoke) /* Standard syntax */
+		height: 600px
+		padding: 5em 0 0 0
 
 		video
 			display: block
@@ -17,15 +20,14 @@
 	.main
 		width 100%
 		max-width: 1200px
-		height: 550px
-		padding: 10em 0
-		margin: auto
+		padding: 5em 0 0 0
+		margin: 0 auto 10em auto
 
 		p
 			margin-bottom: 1em
 
 	.streetteamAdWrap
-		background-color: $yellowO
+		background: $yellowO
 		width: 100%
 
 	.streetteamAd

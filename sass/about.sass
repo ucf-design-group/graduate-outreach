@@ -1,6 +1,10 @@
 .page-about
 	.venSectionWrap
 		background-color: $yellowO
+		background: -webkit-linear-gradient($yellowO, whitesmoke) /* For Safari 5.1 to 6.0 */
+		background: -o-linear-gradient($yellowO, whitesmoke) /* For Opera 11.1 to 12.0 */
+		background: -moz-linear-gradient($yellowO, whitesmoke) /* For Firefox 3.6 to 15 */
+		background: linear-gradient($yellowO, whitesmoke) /* Standard syntax */
 
 	.venSection
 		width: 100%
@@ -23,9 +27,8 @@
 	.main
 		width 100%
 		max-width: 1200px
-		height: 550px
-		padding: 10em 0
-		margin: auto
+		padding: 0
+		margin: 0 auto 10em auto
 
 		p
 			margin-bottom: 1em
